@@ -2,9 +2,13 @@ def main():
 
 	path_to_file = "books/frankenstein.txt"
 	text = read_book_text(path_to_file)
-	print(get_count_words(text))	
-	print(get_count_letter(text))
-
+	print(f"--- Begin report of {path_to_file} ---")
+	print(f"{get_count_words(text)} words found in the document\n")
+	letters_dict = get_count_letter(text)
+	for letter in letters_dict: 
+		if letter in "abcdefghijklmnopqrstuvwxyz":
+			print(f"The \'{letter}\' character was found {letters_dict[letter]} times")
+	print("--- End report ---")
 def read_book_text(book_path):
 	with open(book_path) as f:
 		book_text = f.read()
