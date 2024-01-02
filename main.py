@@ -6,7 +6,7 @@ def main():
 	print(f"{get_count_words(text)} words found in the document\n")
 	letters_dict = get_count_letter(text)
 	for letter in letters_dict: 
-		if letter in "abcdefghijklmnopqrstuvwxyz":
+		if letter.isalpha(): 
 			print(f"The \'{letter}\' character was found {letters_dict[letter]} times")
 	print("--- End report ---")
 def read_book_text(book_path):
