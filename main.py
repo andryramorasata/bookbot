@@ -1,5 +1,5 @@
 def main():
-
+    #for PAT
 	path_to_file = "books/frankenstein.txt"
 	text = read_book_text(path_to_file)
 	print(f"--- Begin report of {path_to_file} ---")
